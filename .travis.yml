@@ -10,14 +10,14 @@ before_install:
 script:     
     - docker run -e CI=true rogerusyd/sample-app npm run test -- --coverage --watchAll=false
 
-  deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1" ### AWS region of your choice
-  app: "Sampledockerreact-env" ### Your EB App name
-  env: "Sampledockerreactenv-env" ### Your EB App environment name
-  bucket_name: "elasticbeanstalk-us-east-1-765349309354" ### S3 bucket name
-  bucket_path: "simple-docker-react" ### S3 folder name under S3 bucket above
-  on:
-    branch: main
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key: "$AWS_SECRET_KEY"
+  # deploy:
+  # provider: elasticbeanstalk
+  # region: "us-east-1" ### AWS region of your choice
+  # app: "Sampledockerreact-env" ### Your EB App name
+  # env: "Sampledockerreactenv-env" ### Your EB App environment name
+  # bucket_name: "elasticbeanstalk-us-east-1-765349309354" ### S3 bucket name
+  # bucket_path: "simple-docker-react" ### S3 folder name under S3 bucket above
+  # on:
+  #   branch: main
+  # access_key_id: "$AWS_ACCESS_KEY"
+  # secret_access_key: "$AWS_SECRET_KEY"
